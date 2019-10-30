@@ -1,0 +1,145 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 14px;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	overflow: hidden;
+}
+
+@font-face {
+	font-family: Manus;
+	src: url(MNS_TRIAL.otf);
+}
+
+#particle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(100% - 100px);
+	height: 100%;
+	overflow: hidden;
+	z-index: 9;
+}
+
+canvas{
+	width: 1900px;
+	height: 800px;
+}
+
+.sidebar {
+	z-index: 999;
+	position: fixed;
+	top: 20%;
+	left: 0;
+	width: 300px;
+	background: rgb(31, 186, 214, .9);
+	transition: all .3s ease;
+	margin-left: -300px;
+	padding: 20px;
+	border-radius: 0 3px 3px 0;
+}
+
+.toggle-button {
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	transform: translateY(-50%);
+	width: 30px;
+	height: 40px;
+	background: inherit;
+	border-radius: 0 3px 3px 0;
+	cursor: pointer;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.toggle-button i {
+	font-size: 20px;
+}
+
+.sidebar.active {
+	margin-left: 0;
+}
+
+.sidebar .form-group{
+	/* padding: 10px; */
+	overflow: hidden;
+}
+
+.sidebar .Buttons{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.form-control {
+	width: 100%;
+}
+
+.start-dialog {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 4;
+}
+
+.start-dialog-center {
+	color: white;
+	text-align: center;
+	/* border: 1px solid white; */
+	width: 400px;
+	position: relative;
+	z-index: 10;
+}
+
+.start-dialog-center h1 {
+	font-family: Manus;
+	font-size: 60px;
+	margin: 0;
+	line-height: 1;
+}
+
+.start-dialog-center p {
+	font-family: Arial;
+	font-size: 1rem;
+	margin: 2rem 0;
+	line-height: 1.5;
+}
+
+.start-dialog-center #start-button {
+	margin-top: 2rem;
+	font-size: 2rem;
+	text-transform: uppercase;
+	font-family: Manus;
+	color: white;
+	padding: 16px 20px 14px;
+	border: none;
+	background: #1fbad6;
+	line-height: 1;
+	cursor: pointer;
+	transition: all .3s ease;
+	outline: 0;
+}
+
+.start-dialog-center #start-button:hover {
+	background: #1692a8;
+}
+
+.start-dialog-center #start-button:active {
+	background: #0e6878;
+}
